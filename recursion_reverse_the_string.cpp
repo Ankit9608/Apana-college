@@ -8,6 +8,7 @@ void reverse(string s){
     string ros=s.substr(1);
     reverse(ros);
     cout<<s[0];
+    
 }
 int main(){
     reverse("binod");

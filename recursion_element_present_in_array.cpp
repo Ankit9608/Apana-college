@@ -25,7 +25,7 @@ int lastocc(int a[],int n,int i,int key){
 }
 int main(){
     int a[]={4,2,1,2,5,2,7};
-    cout<<firstocc(a,7,0,2)<<endl;
+    //cout<<firstocc(a,7,0,2)<<endl;
     cout<<lastocc(a,7,0,2)<<endl;
     return 0;
 }
