@@ -18,9 +18,13 @@ int decimaltobinary(int n){
      
 }
 int32_t main(){
+    int t;
+    cin>>t;
+    while(t--){
     int n;
     cin>>n;
     cout<<decimaltobinary(n)<<endl;
+    }
 }
 
 
