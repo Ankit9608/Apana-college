@@ -65,7 +65,7 @@ void RemoveCycle(node* &head){
     do
     {
         slow=slow->next;
-        fast=fast->next;
+        fast=fast->next->next;
     } while (slow!=fast);
     fast=head;
     
@@ -87,10 +87,10 @@ int main(){
     InsertAtTail(head,5);
     InsertAtTail(head,6);
     MakeCycle(head,3);
-    // cout<<detectcycle(head)<<endl;
-    RemoveCycle(head);
     cout<<detectcycle(head)<<endl;
-    // display(head);
+    // RemoveCycle(head);
+    cout<<detectcycle(head)<<endl;
+    display(head);
     // display(head);
     return 0;
 
