@@ -86,11 +86,11 @@ int main(){
     InsertAtTail(head,4);
     InsertAtTail(head,5);
     InsertAtTail(head,6);
-    MakeCycle(head,1);
-    cout<<detectcycle(head)<<endl;
+    MakeCycle(head,3);
+    // cout<<detectcycle(head)<<endl;
     RemoveCycle(head);
     cout<<detectcycle(head)<<endl;
-    display(head);
+    // display(head);
     // display(head);
     return 0;
 
