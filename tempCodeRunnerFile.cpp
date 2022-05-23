@@ -1,1 +1,1 @@
- MakeCycle(head,3);
+ RemoveCycle(head);
