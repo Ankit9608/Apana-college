@@ -89,7 +89,7 @@ int main(){
     InsertAtTail(head,6);
     MakeCycle(head,3);
     cout<<detectcycle(head)<<endl;
-    // RemoveCycle(head);
+    RemoveCycle(head);
     cout<<detectcycle(head)<<endl;
     display(head);
     // display(head);
