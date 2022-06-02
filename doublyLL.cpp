@@ -78,6 +78,7 @@ void deletpos(node *&head, int pos)
         temp->next->prev = temp->prev;
     }
 }
+
 int main()
 {
     node *head = NULL;
