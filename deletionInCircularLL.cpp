@@ -87,7 +87,37 @@ void deletion(node *&head, int pos)
     node *todelete = temp->next;
     temp->next = temp->next->next;
     delete todelete;
-}
+} /*
+void deletionbyvalue(node *&head, int val)
+{
+
+    if (val == head->data)
+    {
+        node *todelete = head;
+        node *temp = head;
+        while (temp->next != head)
+        {
+            temp = temp->next;
+        }
+        temp->next = head->next;
+        head = head->next;
+        delete todelete;
+    }
+    node *temp = head;
+    while (temp->next->data != val)
+    {
+        temp = temp->next;
+    }
+    if (temp->next->next == head)
+    {
+        node *todelete = temp->next;
+        temp->next = head;
+        delete todelete;
+    }
+    node *todelete = temp->next;
+    temp->next = temp->next->next;
+    delete todelete;
+} */
 int main()
 {
     node *head = NULL;
@@ -102,4 +132,7 @@ int main()
     display(head);
     deleteathead(head);
     display(head);
+    //     deletionbyvalue(head, 4);
+    //     display(head);
+    //
 }
