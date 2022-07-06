@@ -1,8 +1,60 @@
+// #include <iostream>
+// #include <math.h>
+// #include <stack>
+// using namespace std;
+// int prefixsum(string s)
+// {
+//     stack<int> st;
+//     for (int i = s.length() - 1; i >= 0; i--)
+//     {
+//         if (s[i] >= '0' && s[i] <= '9')
+//         {
+//             st.push(s[i] - '0');
+//         }
+//         else
+//         {
+//             int op1 = st.top();
+//             st.pop();
+//             int op2 = st.top();
+//             st.pop();
+//             switch (s[i])
+//             {
+//             case '+':
+//                 st.push(op1 + op2);
+//                 break;
+
+//             case '-':
+//                 st.push(op1 - op2);
+//                 break;
+
+//             case '*':
+//                 st.push(op1 * op2);
+//                 break;
+
+//             case '/':
+//                 st.push(op1 / op2);
+//                 break;
+
+//             case '^':
+//                 st.push(pow(op1, op2));
+//                 break;
+//             }
+//         }
+//     }
+//     return st.top();
+// }
+// int main()
+// {
+//     cout << prefixsum("-+7*45+20");
+//     return 0;
+// }
+
 #include <iostream>
-#include <math.h>
+#include <bits/stdc++.h>
 #include <stack>
+#include <math.h>
 using namespace std;
-int prefixsum(string s)
+int prefixevaluation(string s)
 {
     stack<int> st;
     for (int i = s.length() - 1; i >= 0; i--)
@@ -19,24 +71,32 @@ int prefixsum(string s)
             st.pop();
             switch (s[i])
             {
-            case '+':
+            case /* constant-expression */ '+':
+                /* code */
                 st.push(op1 + op2);
                 break;
 
-            case '-':
+            case /* constant-expression */ '^':
+                /* code */
+                st.push(pow(op1, op2));
+                break;
+
+            case /* constant-expression */ '-':
+                /* code */
                 st.push(op1 - op2);
                 break;
 
-            case '*':
+            case /* constant-expression */ '*':
+                /* code */
                 st.push(op1 * op2);
                 break;
 
-            case '/':
+            case /* constant-expression */ '/':
+                /* code */
                 st.push(op1 / op2);
                 break;
 
-            case '^':
-                st.push(pow(op1, op2));
+            default:
                 break;
             }
         }
@@ -45,6 +105,6 @@ int prefixsum(string s)
 }
 int main()
 {
-    cout << prefixsum("-+7*45+20");
+    cout << prefixevaluation("-+7*45+20");
     return 0;
 }
