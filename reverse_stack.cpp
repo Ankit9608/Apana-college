@@ -1,8 +1,98 @@
+// // #include <iostream>
+// // #include <bits/stdc++.h>
+// // #include <stack>
+// // using namespace std;
+// // void InsetAtBottom(stack<int> &st, int ele)
+// // {
+// //     if (st.empty())
+// //     {
+// //         st.push(ele);
+// //         return;
+// //     }
+// //     int topele = st.top();
+// //     st.pop();
+// //     InsetAtBottom(st, ele);
+// //     st.push(topele);
+// // }
+
+// // void reverse(stack<int> &st)
+// // {
+// //     if (st.empty())
+// //     {
+// //         return;
+// //     }
+
+// //     int ele = st.top();
+// //     st.pop();
+// //     reverse(st);
+// //     InsetAtBottom(st, ele);
+// // }
+// // int main()
+// // {
+// //     stack<int> st;
+// //     st.push(1);
+// //     st.push(2);
+// //     st.push(3);
+// //     st.push(4);
+// //     st.push(5);
+// //     reverse(st);
+// //     while (!st.empty())
+// //     {
+// //         cout << st.top() << " ";
+// //         st.pop();
+// //     }
+// //     cout << endl;
+// // }
+
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+// void InsertAtbottom(stack<int> &st, int ele)
+// {
+//     if (st.empty())
+//     {
+//         st.push(ele);
+//         return;
+//     }
+//     int topele = st.top();
+//     st.pop();
+//     InsertAtbottom(st, ele);
+//     st.push(topele);
+// }
+// void reverse(stack<int> &st)
+// {
+//     if (st.empty())
+//     {
+//         return;
+//     }
+//     int ele = st.top();
+//     st.pop();
+//     reverse(st);
+//     InsertAtbottom(st, ele);
+// }
+// int main()
+// {
+//     stack<int> st;
+//     st.push(1);
+//     st.push(2);
+//     st.push(3);
+//     st.push(4);
+//     st.push(5);
+//     reverse(st);
+//     while (!st.empty())
+//     {
+//         cout << st.top() << " ";
+//         st.pop();
+//     }
+//     cout << endl;
+// }
+
 #include <iostream>
 #include <bits/stdc++.h>
 #include <stack>
+
 using namespace std;
-void InsetAtBottom(stack<int> &st, int ele)
+void insertatbottom(stack<int> &st, int ele)
 {
     if (st.empty())
     {
@@ -11,7 +101,7 @@ void InsetAtBottom(stack<int> &st, int ele)
     }
     int topele = st.top();
     st.pop();
-    InsetAtBottom(st, ele);
+    insertatbottom(st, ele);
     st.push(topele);
 }
 
@@ -21,11 +111,10 @@ void reverse(stack<int> &st)
     {
         return;
     }
-
     int ele = st.top();
     st.pop();
     reverse(st);
-    InsetAtBottom(st, ele);
+    insertatbottom(st, ele);
 }
 int main()
 {
