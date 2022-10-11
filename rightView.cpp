@@ -64,10 +64,14 @@ int main()
     root->left->right = new node(5);
     root->right->left = new node(6);
     root->right->right = new node(7);
+    node *root1 = new node(1);
+    root1->right = new node(2);
+    root1->right->left = new node(3);
+    root1->right->right = new node(4);
     // int height=0;
     // vector<int >right;
 
     // rightview(root,&height,right);
-    rightview(root);
+    rightview(root1);
     return 0;
 }
